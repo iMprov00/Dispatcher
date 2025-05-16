@@ -205,6 +205,7 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBoxID);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.MaximumSize = new System.Drawing.Size(540, 403);
             this.MinimumSize = new System.Drawing.Size(540, 403);
             this.Name = "WorkerView";

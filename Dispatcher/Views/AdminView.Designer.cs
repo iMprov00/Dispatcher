@@ -262,6 +262,7 @@
             this.Controls.Add(this.dataGridView3);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.MaximumSize = new System.Drawing.Size(906, 544);
             this.MinimumSize = new System.Drawing.Size(906, 544);
             this.Name = "AdminView";

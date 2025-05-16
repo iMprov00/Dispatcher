@@ -116,7 +116,18 @@ namespace Dispatcher.Views
 
         }
 
-        private void buttonRefill_Click(object sender, EventArgs e)
+
+        private void AllRequestsView_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridViewRequests_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void buttonRequest_Click(object sender, EventArgs e)
         {
             if (checkBoxSort.Checked)
             {
@@ -127,16 +138,6 @@ namespace Dispatcher.Views
             {
                 dataGridViewRequests.DataSource = RequestsController.GetRequests();
             }
-        }
-
-        private void AllRequestsView_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridViewRequests_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

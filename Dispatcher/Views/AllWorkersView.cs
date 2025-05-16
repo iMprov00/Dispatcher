@@ -26,6 +26,7 @@ namespace Dispatcher.Views
             view.AutoScroll = true;
             view.TopMost = true;
             ((Panel)this.Parent).Controls.Add(view);
+            view.BringToFront();
             view.Show();
         }
 

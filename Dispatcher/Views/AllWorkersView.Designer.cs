@@ -40,6 +40,7 @@
             // 
             // dataGridViewWorkers
             // 
+            this.dataGridViewWorkers.BackgroundColor = System.Drawing.Color.LightSteelBlue;
             this.dataGridViewWorkers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewWorkers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewWorkers.Location = new System.Drawing.Point(0, 0);
@@ -53,9 +54,9 @@
             // buttonAdd
             // 
             this.buttonAdd.Dock = System.Windows.Forms.DockStyle.Right;
-            this.buttonAdd.Location = new System.Drawing.Point(627, 0);
+            this.buttonAdd.Location = new System.Drawing.Point(625, 0);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(106, 42);
+            this.buttonAdd.Size = new System.Drawing.Size(106, 40);
             this.buttonAdd.TabIndex = 1;
             this.buttonAdd.Text = "Добавить";
             this.buttonAdd.UseVisualStyleBackColor = true;
@@ -63,6 +64,8 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.buttonRefill);
             this.panel1.Controls.Add(this.buttonAdd);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -74,9 +77,9 @@
             // buttonRefill
             // 
             this.buttonRefill.Dock = System.Windows.Forms.DockStyle.Right;
-            this.buttonRefill.Location = new System.Drawing.Point(521, 0);
+            this.buttonRefill.Location = new System.Drawing.Point(519, 0);
             this.buttonRefill.Name = "buttonRefill";
-            this.buttonRefill.Size = new System.Drawing.Size(106, 42);
+            this.buttonRefill.Size = new System.Drawing.Size(106, 40);
             this.buttonRefill.TabIndex = 3;
             this.buttonRefill.Text = "Обновить";
             this.buttonRefill.UseVisualStyleBackColor = true;
@@ -98,10 +101,10 @@
             this.ClientSize = new System.Drawing.Size(733, 493);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.MaximumSize = new System.Drawing.Size(749, 532);
             this.MinimumSize = new System.Drawing.Size(749, 532);
             this.Name = "AllWorkersView";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Работники";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.AllWorkersView_Load);

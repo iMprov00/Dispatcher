@@ -230,7 +230,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxID);
             this.Controls.Add(this.labelName);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.MaximumSize = new System.Drawing.Size(509, 539);
             this.MinimumSize = new System.Drawing.Size(509, 539);
             this.Name = "RequestView";

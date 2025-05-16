@@ -24,17 +24,44 @@ namespace Dispatcher
 
         private void btnAuth_Click(object sender, EventArgs e)
         {
+           
+                
+        }
+
+        private void chkPassword_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e)
+        {
+            txtPassword.UseSystemPasswordChar = !chkPassword.Checked;
+        }
+
+        private void bunifuLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtLogin_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuCheckBox1_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e)
+        {
+
+        }
+
+        private void btnAuth_Click_1(object sender, EventArgs e)
+        {
             string user = txtLogin.Text;
             string password = txtPassword.Text;
             if (user == "" || password == "")
             {
-                                MessageBox.Show(
-                    "Заполините все поля!",
-                    "Ошибка авторизации",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error
-                );
-            } else
+                MessageBox.Show(
+    "Заполините все поля!",
+    "Ошибка авторизации",
+    MessageBoxButtons.OK,
+    MessageBoxIcon.Error
+);
+            }
+            else
             {
 
                 if (AuthorizationController.Auth(user, password))
@@ -58,27 +85,6 @@ namespace Dispatcher
                     txtLogin.Focus();
                 }
             }
-                
-        }
-
-        private void chkPassword_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e)
-        {
-            txtPassword.UseSystemPasswordChar = !chkPassword.Checked;
-        }
-
-        private void bunifuLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtLogin_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuCheckBox1_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e)
-        {
-
         }
     }
 }
