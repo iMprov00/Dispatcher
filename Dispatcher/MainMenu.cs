@@ -17,6 +17,7 @@ namespace Dispatcher
         {
             InitializeComponent();
             Program.formsContext.Add(this);
+
         }
 
 
