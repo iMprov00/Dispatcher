@@ -94,7 +94,7 @@ namespace Dispatcher.Views
             {
                 MessageBox.Show($"Ошибка при сохранении: {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
+        } 
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
