@@ -47,22 +47,45 @@ namespace Dispatcher.Views
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            currentWorker.Name = textBoxName.Text;
-            currentWorker.Surname = textBoxSurname.Text;
-            currentWorker.Patronymic = textBox1.Text;
-            currentWorker.PhoneNumber = textBox2.Text;
-            currentWorker.Post_ID = (int)comboBoxPost.SelectedValue;
-            if (currentWorker.ID == 0)
-            {
-                WorkerController.InsertWorkerInfo(currentWorker);
-                this.Text = currentWorker.Name + " " + currentWorker.Surname + " " + currentWorker.Patronymic;
-            }
-            else
-                WorkerController.entities.SaveChanges();
+
 
         }
 
         private void buttonDelete_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonSave_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                currentWorker.Name = textBoxName.Text;
+                currentWorker.Surname = textBoxSurname.Text;
+                currentWorker.Patronymic = textBox1.Text;
+                currentWorker.PhoneNumber = textBox2.Text;
+                currentWorker.Post_ID = (int)comboBoxPost.SelectedValue;
+                if (currentWorker.ID == 0)
+                {
+                    WorkerController.InsertWorkerInfo(currentWorker);
+                    this.Text = currentWorker.Name + " " + currentWorker.Surname + " " + currentWorker.Patronymic;
+                }
+                else
+                    WorkerController.entities.SaveChanges();
+
+                MessageBox.Show("Данные сохранены!", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                EventAggregator.NotifyDataChanged();
+                // Закрываем текущую форму и возвращаемся 
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка при сохранении: {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void buttonDelete_Click_1(object sender, EventArgs e)
         {
             if (currentWorker.ID != 0)
             {

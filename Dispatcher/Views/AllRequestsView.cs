@@ -90,7 +90,7 @@ namespace Dispatcher.Views
 
         private void AllRequestsView_Load(object sender, EventArgs e)
         {
-         //   panel1.Dock = DockStyle.None; // Уберите DockStyle.Top
+ panel1.Dock = DockStyle.None; // Уберите DockStyle.Top
             panel1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel1.Height = 50;
             panel1.Location = new Point(0, 0); // В верхней части контейнера
@@ -182,6 +182,11 @@ namespace Dispatcher.Views
                 dataGridViewRequests.DataSource = RequestsController.GetRequestsForStatus((int)comboBoxStatus.SelectedValue);
                 dataGridViewRequests.Columns[dataGridViewRequests.ColumnCount - 1].Visible = false;
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

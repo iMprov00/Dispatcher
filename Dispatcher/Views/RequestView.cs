@@ -64,6 +64,33 @@ namespace Dispatcher.Views
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
+
+        } 
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RequestView_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonDelete_Click_1(object sender, EventArgs e)
+        {
+            if (currentRequest.ID != 0)
+            {
+                if (MessageBox.Show("Вы действиетельно хотите удалить запрос?", "Предупреждение", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    RequestsController.DeleteRequestInfo(currentRequest);
+                    this.Close();
+                }
+            }
+        }
+
+        private void bunifuButton21_Click(object sender, EventArgs e)
+        {
             try
             {
                 currentRequest.Dispatcher_ID = (int)comboBoxDispatcher.SelectedValue;
@@ -94,23 +121,6 @@ namespace Dispatcher.Views
             {
                 MessageBox.Show($"Ошибка при сохранении: {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        } 
-
-        private void buttonDelete_Click(object sender, EventArgs e)
-        {
-            if (currentRequest.ID != 0)
-            {
-                if(MessageBox.Show("Вы действиетельно хотите удалить запрос?", "Предупреждение", MessageBoxButtons.YesNo) == DialogResult.Yes)
-                {
-                    RequestsController.DeleteRequestInfo(currentRequest);
-                    this.Close();
-                }
-            }
-        }
-
-        private void RequestView_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
